@@ -1,44 +1,43 @@
-# graph
+# Graph Algorithms in Clojure
 
-FIXME: description
+This project provides an implementation of essential graph algorithms in Clojure, focusing on graph generation, shortest path computation using Dijkstra's algorithm, and key graph metrics.
 
-## Installation
+## Modules Overview
 
-Download from http://example.com/FIXME.
+### 1. Graph Generator (`src/graph/graph_generator.clj`)
+
+This module generates random weighted graphs, where nodes are connected by edges with assigned weights.
+
+### 2. Dijkstra's Algorithm (`src/graph/dijkstra.clj`)
+
+Find the shortest path between nodes in a weighted directed graph with Dijkstra's Algorithm.
+
+### 3. Graph Metrics (`src/graph/graph_metrics.clj`)
+
+Calculates important graph properties:
+
+- **Eccentricity**: The longest shortest path from a node to any other reachable node.
+- **Radius**: The minimum eccentricity among all nodes.
+- **Diameter**: The maximum eccentricity among all nodes.
 
 ## Usage
 
-FIXME: explanation
+This project can be used for graph analysis, including finding optimal paths and understanding graph properties like connectivity and centrality.
 
-    $ java -jar graph-0.1.0-standalone.jar [args]
+### Running the Example
 
-## Options
+Execute the main function to generate a graph and compute its shortest paths and metrics:
 
-FIXME: listing of options this app accepts.
+```clojure
+lein repl
+(-main)
+```
 
-## Examples
+## Dependencies
 
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+- [Clojure](https://clojure.org/)
+- [data.priority-map](https://github.com/clojure/data.priority-map) (for priority queue management in Dijkstra's algorithm)
 
 ## License
 
-Copyright © 2025 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+MIT License
